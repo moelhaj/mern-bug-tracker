@@ -1,0 +1,111 @@
+/* Details */
+
+.details {
+    display: grid;
+}
+
+@media only screen and (min-width:769px) {
+    .details {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Projects */
+
+.search {
+    padding: .5rem;
+    width: 100%;
+    max-width: 300px;
+    margin: .5rem 0;
+    border: 1px solid #d0e1e9;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td, .table th {
+    border: 1px solid #ddd;
+    padding: .5rem;
+}
+
+.table th {
+    background: var(--blue);
+    color: var(--white);
+    text-align: left;
+    font-weight: 300;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td.fitwidth {
+    width: 100px;
+    white-space: nowrap;
+}
+
+.sort-icon {
+    margin-left: .5rem;
+    margin-bottom: -.2rem;
+}
+
+/* Pagination */
+
+.pagination {
+    margin-top: 1rem;
+}
+
+.pagination li.disabled {
+    color: #6c757d;
+    pointer-events: none;
+    cursor: auto;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+.pagination li span {
+    display: block;
+    padding: .5rem .75rem;
+    font-size: 14px;
+}
+
+.pagination li {
+    border: 1px solid #d0e1e9;
+    color: var(--blue);
+    margin-left: -1px;
+}
+
+.pagination li.active {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.pagination li:first-child {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.pagination li:last-child {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+/* New Project */
+
+.new-project {
+    padding-top: 1rem;
+}
+
+.new-project {
+    max-width: 500px;
+    width: 100%;
+}
+
+.new-project input, select, textarea {
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+}

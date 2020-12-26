@@ -1,0 +1,44 @@
+@media (max-width:768px) {
+    .login {
+        flex-direction: column;
+    }
+    .login-right, .login-left {
+        height: 50%;
+    }
+}
+
+.login h1 {
+    font-weight: 200;
+}
+
+.login-right, .login-left {
+    width: 100%;
+    padding: 2rem;
+}
+
+.login-left {
+    background: var(--blue);
+    color: var(--white);
+}
+
+/* Form */
+
+.login-form {
+    width: 100%;
+    padding: 2rem;
+    max-width: 400px;
+}
+
+.login-form input {
+    width: 100%;
+}
+
+.login-password {
+    position: relative;
+}
+
+.login-password-toggle {
+    position: absolute;
+    right: .5rem;
+    top: 1rem;
+}
