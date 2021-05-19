@@ -2,25 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
 const config = require('./config');
+const db = require('./db');
 
 const app = express();
-
-// Database
-function dbConnect() {
-    mongoose.connect(config.DATABASE, { 
-        useNewUrlParser: true, 
-        useUnifiedTopology: true, 
-        useCreateIndex: true,
-        useFindAndModify: false
-    })
-        .then(() => console.log('Connected to database'))
-        .catch(err => {
-            console.error("Unable to connect, retrying to connect");
-            dbConnect();
-        });
-}
-
-dbConnect();
 
 // Middleware
 app.use(helmet());
@@ -41,8 +25,5 @@ app.use('/user', user);
 //     res.sendFile(__dirname + '/public/index.html');
 // })
 
-// Start the application
-const port = process.env.PORT || config.PORT;
-app.listen(port, () => {
-    console.log(`Running at ${port}`);
-});
+// starting the application
+db.connect(app, config.PORT);
