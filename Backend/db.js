@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
-require('dotenv').config();
+const config = require('./config');
 
 let tries = 0;
 
 function connect(app, port) {
-    mongoose.connect(process.env.DATABASE, {
+    mongoose.connect(config.DATABASE, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
